@@ -13,12 +13,15 @@ const credit = document.querySelector('#credit')
 // Gingerbread
 const gbPlusBtn = document.querySelector('#add-gb')
 const gbMinusBtn = document.querySelector('#minus-gb')
+const gbQty = document.querySelector('#qty-gb')
 // Choc Chip
 const ccPlusBtn = document.querySelector('#add-cc')
 const ccMinusBtn = document.querySelector('#minus-cc')
+const ccQty = document.querySelector('#qty-cc')
 // Sugar Cookie
 const sugarPlusBtn = document.querySelector('#add-sugar')
 const sugarMinusBtn = document.querySelector('#minus-sugar')
+const sugarQty = document.querySelector('#qty-sugar')
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
@@ -26,7 +29,8 @@ credit.textContent = `Created by ${yourName}`
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
 
-    console.log('Gingerbread + button was clicked!')
+    console.log(`Gingerbread Quantity is`, parseInt(gbQty.innerHTML))
+
 
 })
 
