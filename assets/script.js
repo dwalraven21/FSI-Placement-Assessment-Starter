@@ -28,8 +28,11 @@ credit.textContent = `Created by ${yourName}`
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
+    
+    
+    let newInt = parseInt(gbQty.innerHTML) + 1
 
-    console.log(`Gingerbread Quantity is`, parseInt(gbQty.innerHTML))
+    console.log(`Gingerbread Quantity is`, newInt)
 
 
 })
