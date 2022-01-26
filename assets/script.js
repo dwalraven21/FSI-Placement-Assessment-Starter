@@ -34,8 +34,11 @@ gbPlusBtn.addEventListener('click', function() {
 
 // Event listener for clicks on the "-" button for Gingerbread cookies
 gbMinusBtn.addEventListener('click', function() {
-
-    console.log('Gingerbread - button was clicked!')
+    if (gbQty.innerHTML == 0){
+        return
+    }
+    let newInt = parseInt(gbQty.innerHTML) - 1
+    gbQty.innerHTML = newInt
 
 })
 
@@ -47,8 +50,11 @@ ccPlusBtn.addEventListener('click', function() {
 
 // Event listener for clicks on the "-" button for Choc Chip cookies
 ccMinusBtn.addEventListener('click', function() {
-
-    console.log('Choc Chip - button was clicked!')
+    if (ccQty.innerHTML == 0){
+        return
+    }
+    let newInt = parseInt(ccQty.innerHTML) - 1
+    ccQty.innerHTML = newInt
 
 })
 
@@ -60,8 +66,11 @@ sugarPlusBtn.addEventListener('click', function() {
 
 // Event listener for clicks on the "-" button for sugar cookies
 sugarMinusBtn.addEventListener('click', function() {
-
-    console.log('sugar - button was clicked!')
+    if (sugarQty.innerHTML == 0){
+        return
+    }
+    let newInt = parseInt(sugarQty.innerHTML) - 1
+    sugarQty.innerHTML = newInt
 
 })
 
