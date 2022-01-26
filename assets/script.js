@@ -28,13 +28,8 @@ credit.textContent = `Created by ${yourName}`
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
-    
-    
     let newInt = parseInt(gbQty.innerHTML) + 1
-
-    console.log(`Gingerbread Quantity is`, newInt)
-
-
+    gbQty.innerHTML = newInt
 })
 
 // Event listener for clicks on the "-" button for Gingerbread cookies
@@ -46,9 +41,8 @@ gbMinusBtn.addEventListener('click', function() {
 
 // Event listener for clicks on the "+" button for Choc Chip cookies
 ccPlusBtn.addEventListener('click', function() {
-
-    console.log('Choc Chip + button was clicked!')
-
+    let newInt = parseInt(ccQty.innerHTML) + 1
+    ccQty.innerHTML = newInt
 })
 
 // Event listener for clicks on the "-" button for Choc Chip cookies
@@ -60,9 +54,8 @@ ccMinusBtn.addEventListener('click', function() {
 
 // Event listener for clicks on the "+" button for sugar cookies
 sugarPlusBtn.addEventListener('click', function() {
-
-    console.log('sugar + button was clicked!')
-
+    let newInt = parseInt(sugarQty.innerHTML) + 1
+    sugarQty.innerHTML = newInt
 })
 
 // Event listener for clicks on the "-" button for sugar cookies
