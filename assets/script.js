@@ -7,6 +7,7 @@ let yourName = "Danielle Walraven" // HINT: Replace this with your own name!
 let gb = 0 // Gingerbread
 let cc = 0 // Chocolate Chip
 let sugar = 0 // Sugar Sprinkle
+let total = 0 // Total
 
 // selecting the elements
 const credit = document.querySelector('#credit')
@@ -22,56 +23,68 @@ const ccQty = document.querySelector('#qty-cc')
 const sugarPlusBtn = document.querySelector('#add-sugar')
 const sugarMinusBtn = document.querySelector('#minus-sugar')
 const sugarQty = document.querySelector('#qty-sugar')
+// Total
+const totalQty = document.querySelector('#qty-total')
 
 // Code to update name display
 credit.textContent = `Created by ${yourName}`
 
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbPlusBtn.addEventListener('click', function() {
-    let newInt = parseInt(gbQty.innerHTML) + 1
-    gbQty.innerHTML = newInt
+    gb ++
+    total ++
+    gbQty.innerHTML = gb
+    totalQty.innerHTML = total
 })
 
 // Event listener for clicks on the "-" button for Gingerbread cookies
 gbMinusBtn.addEventListener('click', function() {
-    if (gbQty.innerHTML == 0){
+    if (gb == 0){
         return
     }
-    let newInt = parseInt(gbQty.innerHTML) - 1
-    gbQty.innerHTML = newInt
-
+    gb --
+    total --
+    gbQty.innerHTML = gb
+    totalQty.innerHTML = total
 })
 
 // Event listener for clicks on the "+" button for Choc Chip cookies
 ccPlusBtn.addEventListener('click', function() {
-    let newInt = parseInt(ccQty.innerHTML) + 1
-    ccQty.innerHTML = newInt
+    cc ++
+    total ++
+    ccQty.innerHTML = cc
+    totalQty.innerHTML = total
 })
 
 // Event listener for clicks on the "-" button for Choc Chip cookies
 ccMinusBtn.addEventListener('click', function() {
-    if (ccQty.innerHTML == 0){
+    if (cc == 0){
         return
     }
-    let newInt = parseInt(ccQty.innerHTML) - 1
-    ccQty.innerHTML = newInt
+    cc --
+    total --
+    ccQty.innerHTML = cc
+    totalQty.innerHTML = total
 
 })
 
 // Event listener for clicks on the "+" button for sugar cookies
 sugarPlusBtn.addEventListener('click', function() {
-    let newInt = parseInt(sugarQty.innerHTML) + 1
-    sugarQty.innerHTML = newInt
+    sugar ++
+    total ++
+    sugarQty.innerHTML = sugar
+    totalQty.innerHTML = total
 })
 
 // Event listener for clicks on the "-" button for sugar cookies
 sugarMinusBtn.addEventListener('click', function() {
-    if (sugarQty.innerHTML == 0){
+    if (sugar == 0){
         return
     }
-    let newInt = parseInt(sugarQty.innerHTML) - 1
-    sugarQty.innerHTML = newInt
-
+    sugar --
+    total --
+    sugarQty.innerHTML = sugar
+    totalQty.innerHTML = total
 })
 
 
